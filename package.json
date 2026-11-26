@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "npx tailwindcss -i ./src/app/globals.css -o ./public/css/style.css --minify && next build && node scripts/fix-static-export.js",
+    "deploy": "npm run build && npx gh-pages -d out --dotfiles -b gh-pages",
     "start": "next start",
     "lint": "next lint"
   },
